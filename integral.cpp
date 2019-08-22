@@ -8,7 +8,7 @@
 int main() {
   srand(time(NULL));
   std::vector<double> vec;
-  float upper, lower, x,sum;
+  float upper, lower, sum;
 
   int iterations;
 
@@ -29,11 +29,8 @@ int main() {
   for (int i = 0; i < iterations; ++i)
   {
     float r = lower + static_cast<float>(rand()) / static_cast<float>(RAND_MAX/(upper-lower));
-    double avg;
     sum = 0;
     sum = (upper-lower)*(std::pow(r,2));
-    //std::cout << "R: " << r << '\n';
-    //std::cout << "SUM: " << sum <<'\n';
     vec.push_back(sum);
   }
 
